@@ -30,16 +30,16 @@ function App() {
         <div>
           <h3>Footer</h3>
           <ul>
-            <li>Col 1 - Line 1</li>
-            <li>Col 1 - Line 2</li>
-            <li>Col 1 - Line 3</li>
-            <li>Col 1 - Line 4</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
           </ul>
           <ul>
-            <li>Col 2 - Line 1</li>
-            <li>Col 2 - Line 2</li>
-            <li>Col 2 - Line 3</li>
-            <li>Col 2 - Line 4</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
           </ul>
         </div>
       </footer>
