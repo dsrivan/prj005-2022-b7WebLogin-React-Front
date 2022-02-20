@@ -16,11 +16,14 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
     return false;
   };
 
-  const signOut = () => {};
+  const signOut = async () => {
+    await api.signOut();
+    setUser(null);
+  };
 
   return (
     <AuthContext.Provider value={{ user, signIn, signOut }}>
-      {Children}
+      {children}
     </AuthContext.Provider>
   );
 };
