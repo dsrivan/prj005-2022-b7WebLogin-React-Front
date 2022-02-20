@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./App.css";
 import { Route, Routes, Link } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Private } from "./pages/Private";
 import { RequireAuth } from "./contexts/Auth/RequireAuth";
+import { AuthContext } from "./contexts/Auth/AuthContext";
 
 function App() {
+  const auth = useContext(AuthContext);
+
   return (
     <div className="App">
       <header>
@@ -14,6 +17,7 @@ function App() {
           <nav>
             <Link to="/">Home</Link>
             <Link to="/private">Private page</Link>
+            {auth.user && <a href="javascript:;">Sair</a>}
           </nav>
         </div>
       </header>

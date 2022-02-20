@@ -2,18 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 width: 100%;
-max-width: 600px;
+max-width: 700px;
 margin: 0 auto;
-border: 1px solid #eae9e9;
-padding: 50px;
+border: 1px solid transparent;
+padding: 60px 50px;
 border-radius: 5px;
+box-shadow: 0px 0px 20px 0px #eaeaea;
 `;
 
 export const H3 = styled.h3`
   margin-bottom: 30px;
 `;
 
-export const InputTextPassword = styled.input`
+export const InputEmailPassword = styled.input`
   display: block;
   width: 100%;
   padding: 10px;
@@ -26,6 +27,10 @@ export const InputTextPassword = styled.input`
   &:focus-visible {
     border: 1px solid #5a50f0;
   }
+`;
+
+export const Erro = styled.p`
+color: red;
 `;
 
 export const ButtonLogin = styled.button`

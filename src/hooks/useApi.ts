@@ -10,8 +10,20 @@ export const useApi = () => ({
     return response.data;
   },
   signIn: async (email: string, password: string) => {
-    const response = await api.post("/signin", { email, password });
-    return response.data;
+    const fakeData = {
+      user: {
+        id: 23,
+        name: "Usuário",
+        email: "email@dominio.net",
+      },
+      token: "122334455667788990",
+    };
+    return fakeData;
+
+    /*
+      const response = await api.post("/signin", { email, password });
+      return response.data;
+    */
   },
   signOut: async () => {
     const response = await api.post("/logout");
