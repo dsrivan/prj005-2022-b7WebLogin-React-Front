@@ -1,38 +1,72 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* General CSS - Begin */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+#root > .App {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+header,
+footer {
+  background-color: #5a50f0;
+  color: #fff;
+}
+
+header,
+main,
+footer {
+  width: inherit;
+  padding: 10px 20px;
+}
+
+main {
+  color: #5a50f0;
+}
+
+/* General CSS - End */
+
+header > div,
+footer > div {
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+header nav a {
+  color: #fff;
+  display: inline-block;
+  margin: 10px 5px;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header nav a:hover {
+  background-color: #fff;
+  color: #5a50f0;
+}
+
+footer > div > ul > li {
+  list-style-type: none;
+  padding: 5px 0;
 }

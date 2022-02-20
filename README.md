@@ -57,3 +57,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - Router
 - Token
 - Persistence
+
+### Libs
+
+- React Router DOM
+- Axios
