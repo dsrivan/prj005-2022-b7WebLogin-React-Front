@@ -59,9 +59,21 @@ header nav a {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 4px;
+  font-size: 14px;
 }
 
-header nav a:hover {
+header nav button.btnLogOut {
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  font-size: 14px;
+}
+
+header nav a:hover,
+header nav button.btnLogOut:hover {
   background-color: #fff;
   color: #5a50f0;
 }
