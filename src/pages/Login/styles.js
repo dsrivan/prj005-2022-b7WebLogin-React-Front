@@ -14,7 +14,7 @@ export const H3 = styled.h3`
   margin-bottom: 30px;
 `;
 
-export const InputEmailPassword = styled.input`
+export const InputTextPassword = styled.input`
   display: block;
   width: 100%;
   padding: 10px;

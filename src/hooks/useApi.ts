@@ -11,8 +11,8 @@ export const useApi = () => ({
     return {
       user: {
         id: 23,
-        name: "User's name",
-        email: "email@domain.net",
+        name: "username",
+        email: "username@domain.net",
       },
     };
 
@@ -21,12 +21,12 @@ export const useApi = () => ({
     return response.data;
   */
   },
-  signIn: async (email: string, password: string) => {
+  signIn: async (name: string, password: string) => {
     return {
       user: {
         id: 23,
-        name: "User's name",
-        email: "email@domain.net",
+        name: name,
+        email: `${name}@domain.net`,
       },
       token: "122334455667788990",
     };

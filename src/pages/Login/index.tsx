@@ -1,29 +1,29 @@
 import { ChangeEvent, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/Auth/AuthContext";
-import { InputEmailPassword, H3, ButtonLogin, Container, Erro } from "./styles";
+import { InputTextPassword, H3, ButtonLogin, Container, Erro } from "./styles";
 
 export const Login = () => {
   const auth = useContext(AuthContext);
 
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
   const [erro, setErro] = useState(false);
 
-  const handleInputEmail = (e: ChangeEvent<HTMLInputElement>) =>
-    setEmail(e.target.value);
+  const handleInputName = (e: ChangeEvent<HTMLInputElement>) =>
+    setName(e.target.value);
 
   const handleInputPassword = (e: ChangeEvent<HTMLInputElement>) =>
     setPassword(e.target.value);
 
   const handleLogin = async () => {
-    if (email && password) {
+    if (name && password) {
       setErro(false);
 
-      const isLogged = await auth.signIn(email, password);
+      const isLogged = await auth.signIn(name, password);
 
       if (isLogged) {
         navigate("/");
@@ -39,21 +39,21 @@ export const Login = () => {
     <Container>
       <H3>Private page</H3>
 
-      <InputEmailPassword
-        type="email"
-        value={email}
-        placeholder="type your email"
-        onChange={handleInputEmail}
+      <InputTextPassword
+        type="text"
+        value={name}
+        placeholder="type your name"
+        onChange={handleInputName}
         // onChange={(e) => setEmail(e.target.value)}
-      ></InputEmailPassword>
+      ></InputTextPassword>
 
-      <InputEmailPassword
+      <InputTextPassword
         type="password"
         value={password}
         placeholder="type your password"
         onChange={handleInputPassword}
         // onChange={(e) => setPassword(e.target.value)}
-      ></InputEmailPassword>
+      ></InputTextPassword>
 
       {erro && <Erro>Authentication failed</Erro>}
 
