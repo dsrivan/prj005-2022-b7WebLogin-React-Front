@@ -11,7 +11,7 @@ export const useApi = () => ({
     return {
       user: {
         id: 23,
-        name: "Usuário",
+        name: "User's name",
         email: "email@domain.net",
       },
     };
@@ -25,7 +25,7 @@ export const useApi = () => ({
     return {
       user: {
         id: 23,
-        name: "Usuário",
+        name: "User's name",
         email: "email@domain.net",
       },
       token: "122334455667788990",

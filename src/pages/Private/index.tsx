@@ -6,8 +6,8 @@ export const Private = () => {
 
   return (
     <div>
-      <h1>Private page body</h1>
-      <h3>Usuário: {auth.user?.name}</h3>
+      <h1>Private page's content</h1>
+      <h3>User logged: {auth.user?.name}</h3>
     </div>
   );
 };

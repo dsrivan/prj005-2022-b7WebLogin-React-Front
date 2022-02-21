@@ -37,7 +37,7 @@ export const Login = () => {
 
   return (
     <Container>
-      <H3>Página Fechada</H3>
+      <H3>Private page</H3>
 
       <InputEmailPassword
         type="email"
